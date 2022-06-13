@@ -1,0 +1,9 @@
+user/__pycache__
+user/migrations
+user_auth_sys/__pycache__
+user_auth_sys/migrations
+env/
+media/
+.env
+.vscode
+.idea
