@@ -136,12 +136,12 @@ AUTH_USER_MODEL = "user.CustomUser"
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR , 'static_cdn')       # when deployemnt do collectstatic command and then in static file settings in web server(apache/nginx) mention alias as '/static' after it path of static_cdn folder or static folder as set by you 
+STATIC_ROOT = os.path.join(BASE_DIR , 'static')       # when deployemnt do collectstatic command and then in static file settings in web server(apache/nginx) mention alias as '/static' after it path of static_cdn folder or static folder as set by you 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),                # mention folders in saticfiles_dirs where django has to look for static files except static folder inside apps during development 
-]   
+	os.path.join(BASE_DIR, "static"),                # mention folders in saticfiles_dirs where django has to look for static files except static folder inside apps during development 
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
