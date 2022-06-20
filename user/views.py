@@ -88,7 +88,7 @@ class RegisterView(View):
                 createdUser.is_active = True
             createdUser.save()
             messages.success(request, "Account created successfully!")
-            return redirect("register_view")
+            return redirect("login_view")
         else:
             context = {
                 "form": form,
@@ -263,3 +263,13 @@ class UserProfileView(View):
 def logout_view(request):
     request.session.clear()
     return redirect("login_view")
+
+
+def error401_view(request):
+    context = {}
+    return render(request, 'errors/error401_view.html', context=context)
+
+
+def error_register(request):
+    context = {}
+    return render(request, 'errors/error_register.html', context=context)

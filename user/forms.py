@@ -46,7 +46,7 @@ class RegistrationForm(forms.ModelForm):
     
     def clean_full_name(self):
         data = self.cleaned_data.get('full_name')
-        if len(data) <= 5:
+        if len(data) < 5:
             raise ValidationError("Full name must be at least 5 characters!")
         return data 
 
@@ -55,8 +55,8 @@ class RegistrationForm(forms.ModelForm):
         password = self.cleaned_data.get('password')
         password2 = self.cleaned_data.get('password2')
 
-        #check for password length.
-        if len(password) <= 8:
+        #check for password length at least 8 characters.
+        if len(password) < 8:
             raise ValidationError("Password must be at least 8 characters!")
         return password
     
@@ -86,7 +86,7 @@ class CreateUserForm(forms.ModelForm):
     
     def clean_full_name(self):
         data = self.cleaned_data.get('full_name')
-        if len(data) <= 5:
+        if len(data) < 5:
             raise ValidationError("Full name must be at least 5 characters!")
         return data 
 
@@ -95,7 +95,7 @@ class CreateUserForm(forms.ModelForm):
         password = self.cleaned_data.get('password')
 
         #check for password length.
-        if len(password) <= 8:
+        if len(password) < 8:
             raise ValidationError("Password must be at least 8 characters!")
         return password
 

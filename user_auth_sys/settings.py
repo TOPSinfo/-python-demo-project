@@ -136,7 +136,7 @@ AUTH_USER_MODEL = "user.CustomUser"
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR , 'static')       # when deployemnt do collectstatic command and then in static file settings in web server(apache/nginx) mention alias as '/static' after it path of static_cdn folder or static folder as set by you 
+# STATIC_ROOT = os.path.join(BASE_DIR , 'static')       # when deployemnt do collectstatic command and then in static file settings in web server(apache/nginx) mention alias as '/static' after it path of static_cdn folder or static folder as set by you 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 STATICFILES_DIRS = [

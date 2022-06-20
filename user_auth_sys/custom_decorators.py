@@ -22,7 +22,9 @@ def is_user_approved(func):
     def wrapper(request, *args, **kwargs):
         uid = request.session.get('uid')
         user = CustomUser.objects.filter(id=uid).first()
-        if uid is not None and user.status == 2:
+        if uid is not None and not user.is_staff: # check if user is not a staff member.
+            return func(request, *args, **kwargs)
+        elif uid is not None and user.status == 2: # check if user is a staff member and approved.
             return func(request, *args, **kwargs)
         else:
             return HttpResponseRedirect(redirect_to="/user_profile/")
@@ -44,7 +46,7 @@ def check_permission(perm=None):
                 if permissionObj in permisions:
                     return func(request, *args, **kwargs)
                 else:
-                    return HttpResponse("You are not authorized to access this page!")
-            return HttpResponse("You are not registered!")
+                    return redirect('error401_view')
+            return redirect('error_register')
         return wrapper
     return decorator
