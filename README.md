@@ -38,8 +38,10 @@ Staff User can also Update their profile. Staff User can also Register.
 
 2. Add .env configuration file
 
-    ```EMAIL_HOST_USER=dhruvil.m.panchal@gmail.com```
-    ```EMAIL_HOST_PASSWORD=wvraxwzgczxofoqy```
+    ```
+    EMAIL_HOST_USER=dhruvil.m.panchal@gmail.com```
+    EMAIL_HOST_PASSWORD=wvraxwzgczxofoqy
+    ```
 
 3. Create virtual environment with folder name env. Execeute bellow command
 
@@ -58,16 +60,18 @@ Staff User can also Update their profile. Staff User can also Register.
 
 6. Set the databse configuration in settings.py file on DATABASES section.
 
-    ```DATABASES = {```
-        ```'default': {```
-            ```'ENGINE': 'django.db.backends.postgresql_psycopg2',```
-            ```'NAME': 'authsysdb', ```
-            ```'USER': 'authsys', ```
-            ```'PASSWORD': 'authsys@123',```
-            ```'HOST': 'localhost', ```
-            ```'PORT': '5432',```
-        ```}```
-    ```}```
+    ```
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'authsysdb', 
+            'USER': 'authsys', 
+            'PASSWORD': 'authsys@123',
+            'HOST': 'localhost', 
+            'PORT': '5432',
+        }
+    }
+    ```
 
     - Here you can use any databse like sqlite, mysql or postgresql.
     - Make sure you have install any of the above databses in your system.
