@@ -39,7 +39,7 @@ Staff User can also Update their profile. Staff User can also Register.
 2. Add .env configuration file
 
     ```
-    EMAIL_HOST_USER=dhruvil.m.panchal@gmail.com```
+    EMAIL_HOST_USER=dhruvil.m.panchal@gmail.com
     EMAIL_HOST_PASSWORD=wvraxwzgczxofoqy
     ```
 
